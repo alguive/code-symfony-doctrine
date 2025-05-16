@@ -33,6 +33,9 @@
 # Fixtures Data
 ```composer require --dev orm-fixtures```
 
+**Persist created fixtures**
+```symfony console doctrine:fixtures:load```
+
 
 # Questions
 * How to update an entity (table) to add new rows
