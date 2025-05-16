@@ -36,6 +36,9 @@
 **Persist created fixtures**
 ```symfony console doctrine:fixtures:load```
 
+# DQL language
+**Doctrine Query Language** -> Instead of querying from tables, DQL you think on terms of querying Entity Objects
+```symfony console doctrine:query:dql 'select s from App\Entity\Starship s'```
 
 # Questions
 * How to update an entity (table) to add new rows
