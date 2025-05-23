@@ -47,5 +47,8 @@
 **Lista todas las entidades que todavía no tienen Factory**
 ```symfony console make:factory```
 
+# Pagination with pagerfanta
+```composer require babdev/pagerfanta-bundle pagerfanta/doctrine-orm-adapter```
+
 # Questions
 * How to update an entity (table) to add new rows
