@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Starship;
+use App\Entity\StarshipStatusEnum;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -14,6 +15,30 @@ class StarshipRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Starship::class);
+    }
+
+    /**
+     * Return first Starship in table
+     *
+     * @return Starship
+     */
+    public function findMyShip():Starship
+    {
+        return $this->findAll()[0];
+    }
+
+    /**
+     * Return not completed Starships
+     *
+     * @return Starship[]
+     */
+    public function findIncomplete(): array
+    {
+        return $this->createQueryBuilder('e')
+            ->where('e.status != :status')
+            ->setParameter('status', StarshipStatusEnum::COMPLETED)
+            ->getQuery()
+            ->getResult();
     }
 
     //    /**
