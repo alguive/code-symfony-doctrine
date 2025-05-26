@@ -53,7 +53,6 @@ class ShipRemoveCommand extends Command
 
         $io->success('Starship removed.');
 
-
         return Command::SUCCESS;
     }
 }
