@@ -50,5 +50,8 @@
 # Pagination with pagerfanta
 ```composer require babdev/pagerfanta-bundle pagerfanta/doctrine-orm-adapter```
 
+# Update entity (Add new attribute)
+```symfony console make:entity Starship```
+
 # Questions
 * How to update an entity (table) to add new rows
