@@ -53,5 +53,10 @@
 # Update entity (Add new attribute)
 ```symfony console make:entity Starship```
 
+# Make new command (app:ship:remove)
+```symfony console make:command```
+
+**Use the command:** ```symfony console app:ship:remove uss-leafycruiser-ncc-0001```
+
 # Questions
 * How to update an entity (table) to add new rows
